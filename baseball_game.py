@@ -62,7 +62,7 @@ def is_no(one_more_input):
 
 
 def main():
-    global flag
+    flag=0
     print("Play Baseball")
     random_number = str(get_not_duplicated_three_digit_number())
     print("Random Number is : ", random_number)
@@ -98,5 +98,4 @@ def main():
 
 
 if __name__ == "__main__":
-    flag=0
     main()
