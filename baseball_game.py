@@ -71,21 +71,24 @@ def main():
             res=get_strikes_or_ball(user_input,random_number)
             print(f"Strikes : {res[0]}, Balls : {res[1]}")
             if res==[3,0]:
-                one_more_input=input('You win, one more(Y/N) ?')
-                if is_yes(one_more_input):
-                    random_number = str(get_not_duplicated_three_digit_number())
-                    print("Random Number is : ", random_number)
-                    user_input = input('Input guess number : ')
-                elif is_no(one_more_input):
-                    break
-                else:
-                    user_input = input('Wrong Input, Input again : ')
+                user_input=input('You win, one more(Y/N)?')
+                while True:
+                    if is_yes(user_input):
+                        random_number = str(get_not_duplicated_three_digit_number())
+                        print("Random Number is : ", random_number)
+                        user_input = input('Input guess number : ')
+                        break
+                    elif is_no(user_input):
+                        print("Thank you for using this program")
+                        print("End of the Game")
+                        exit()
+                    else:
+                        user_input = input('Wrong Input, Input again : ')
             else:
                 user_input = input('Input guess number : ')
         else:
             user_input = input('Wrong Input, Input again : ')
-    print("Thank you for using this program")
-    print("End of the Game")
+
 
 if __name__ == "__main__":
     main()
