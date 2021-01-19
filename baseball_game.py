@@ -62,10 +62,11 @@ def is_no(one_more_input):
 
 
 def main():
-    flag=0
     print("Play Baseball")
+    user_input=999
     random_number = str(get_not_duplicated_three_digit_number())
     print("Random Number is : ", random_number)
+    flag=0
     user_input = input('Input guess number : ')
     while not flag:
         if is_validated_number(user_input):
@@ -80,8 +81,6 @@ def main():
                         user_input = input('Input guess number : ')
                         break
                     elif is_no(user_input):
-                        print("Thank you for using this program")
-                        print("End of the Game",end='')
                         flag=1
                         break
                     else:
@@ -89,13 +88,11 @@ def main():
             else:
                 user_input = input('Input guess number : ')
         elif user_input=='0':
-            print("Thank you for using this program")
-            print("End of the Game",end='')
             flag=1
             break
         else:
             user_input = input('Wrong Input, Input again : ')
-
-
+    print("Thank you for using this program")
+    print("End of the Game",end='')
 if __name__ == "__main__":
     main()
