@@ -69,7 +69,7 @@ def main():
     while True:
         if is_validated_number(user_input):
             res=get_strikes_or_ball(user_input,random_number)
-            print(f"Strikes : {res[0]}, Balls : {res[1]}")
+            print(f"Strikes : {res[0]} , Balls : {res[1]}")
             if res==[3,0]:
                 user_input=input('You win, one more(Y/N)?')
                 while True:
@@ -86,6 +86,10 @@ def main():
                         user_input = input('Wrong Input, Input again : ')
             else:
                 user_input = input('Input guess number : ')
+        elif user_input=='0':
+            print("Thank you for using this program")
+            print("End of the Game")
+            exit()
         else:
             user_input = input('Wrong Input, Input again : ')
 
