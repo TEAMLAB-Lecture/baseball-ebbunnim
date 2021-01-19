@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import random
 
 
@@ -84,15 +83,19 @@ def main():
                         flag=1
                         break
                     else:
-                        user_input = input('Wrong Input, Input again : ')
+                        print('Wrong Input, Input again')
+                        user_input = input('Input guess number : ')
             else:
                 user_input = input('Input guess number : ')
         elif user_input=='0':
             flag=1
             break
         else:
-            user_input = input('Wrong Input, Input again : ')
+            print('Wrong Input, Input again')
+            user_input = input('Input guess number : ')
     print("Thank you for using this program")
-    print("End of the Game",end='')
+    print("End of the Game")
+
+
 if __name__ == "__main__":
     main()
