@@ -67,7 +67,7 @@ def main():
     random_number = str(get_not_duplicated_three_digit_number())
     print("Random Number is : ", random_number)
     user_input = input('Input guess number : ')
-    while flag==0:
+    while not flag:
         if is_validated_number(user_input):
             res=get_strikes_or_ball(user_input,random_number)
             print(f"Strikes : {res[0]} , Balls : {res[1]}")
@@ -81,7 +81,7 @@ def main():
                         break
                     elif is_no(user_input):
                         print("Thank you for using this program")
-                        print("End of the Game")
+                        print("End of the Game",end='')
                         flag=1
                         break
                     else:
@@ -90,7 +90,7 @@ def main():
                 user_input = input('Input guess number : ')
         elif user_input=='0':
             print("Thank you for using this program")
-            print("End of the Game")
+            print("End of the Game",end='')
             flag=1
             break
         else:
